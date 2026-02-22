@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Sanctuary</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            color: #cfcfcf;
+        }
+
+        .moon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 40%, #f7e6b5 0%, #e2b861 60%, #c48c2f 100%);
+            transition: opacity 0.5s;
+        }
+
+        .moon::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #000;
+            left: 22px; /* Adjust for thinness */
+        }
+
+        .message {
+            position: absolute;
+            bottom: 20%;
+            opacity: 0;
+            transition: opacity 0.8s;
+            text-align: center;
+            font-size: 18px;
+            width: 80%;
+        }
+
+        .moon:hover + .message {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="moon"></div>
+    <div class="message">
+        The time I spent on her lap means so much. What I felt there means everything—even if I don't try to recreate it. I just love how she makes me feel at peace, and I want to be there for her—every moment, every day, just being present in her lap.
+    </div>
+</body>
+</html>
